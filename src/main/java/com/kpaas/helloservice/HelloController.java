@@ -25,4 +25,9 @@ public class HelloController {
         model.addAttribute("title2",titleInfo.getData2());
         return "index";
     }
+
+    @GetMapping("/test")
+    public String test(Model model) {
+        return "test";
+    }
 }
