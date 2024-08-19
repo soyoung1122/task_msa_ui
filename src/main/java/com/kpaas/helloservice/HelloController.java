@@ -26,7 +26,7 @@ public class HelloController {
         return "index";
     }
 
-    @GetMapping("/test")
+    @GetMapping("/test1")
     public String test(Model model) {
         return "test";
     }
