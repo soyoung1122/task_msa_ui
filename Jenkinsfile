@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        GIT_SSL_NO_VERIFY = 'true'
+        GIT_SSL_NO_VERIFY = true
     }
     stages {
         stage('Disable SSL Verification') {
