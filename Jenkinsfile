@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        GIT_SSL_NO_VERIFY = 'true'
+        GIT_SSL_NO_VERIFY = 1
     }
     stages {
         stage('gitlab-clone') {
