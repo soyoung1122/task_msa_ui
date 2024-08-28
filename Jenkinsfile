@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    environment {
-        GIT_SSL_NO_VERIFY = true
-    }
     stages {
         stage('Git Config Setting') {
             steps {
