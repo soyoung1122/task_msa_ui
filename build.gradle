@@ -59,3 +59,12 @@ task checkFilesExist {
 
 build.dependsOn checkFilesExist
 
+sonarqube {
+    properties {
+        property "sonar.projectKey", "task_msa_ui"
+        property "sonar.projectName", "task_msa_ui"
+        property "sonar.projectVersion", "1.0"
+        property "sonar.java.binaries", "$buildDir/classes"
+    }
+}
+
