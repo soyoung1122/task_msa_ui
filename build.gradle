@@ -40,6 +40,22 @@ dependencyManagement {
 	}
 }
 
-tasks.named('test') {
-	useJUnitPlatform()
+task checkFilesExist {
+    doLast {
+        def directory = file('build/classes/java/main')
+        if (directory.exists() && directory.isDirectory()) {
+            def files = directory.listFiles()
+            if (files && files.length > 0) {
+                println "Files in ${directory} directory:"
+                files.each { file -> println file.name }
+            } else {
+                println "No files found in ${directory} directory."
+            }
+        } else {
+            println "${directory} does not exist or is not a directory."
+        }
+    }
 }
+
+build.dependsOn checkFilesExist
+
