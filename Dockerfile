@@ -24,4 +24,4 @@ WORKDIR /app
 COPY --from=builder /app/build/libs/*.jar /app/
 
 # Command to run the JAR file
-ENTRYPOINT ["java", "-jar", "/app/app.jar"]
+ENTRYPOINT ["java", "-jar", "/app/hello-service.jar"]
