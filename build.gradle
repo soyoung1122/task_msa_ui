@@ -6,7 +6,6 @@ plugins {
 }
 
 group = 'com.k-paas'
-version = '1.0'
 
 java {
 	sourceCompatibility = '1.8'
