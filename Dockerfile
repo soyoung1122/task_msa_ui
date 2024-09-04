@@ -21,7 +21,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy the JAR file from the build stage
-COPY --from=builder /app/build/libs/hello-service-*.jar /app/app.jar
+COPY --from=builder /app/build/libs/*.jar /app/
 
 # Command to run the JAR file
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
